@@ -23,6 +23,17 @@
     <p>CECI Est un checkeur de lien ou irl pou vous proteger la vie mon ami.</p>
 </section>
 
+<form id="myForm" onsubmit="event.preventDefault(); processInput();">
+    <label for="entered_url"></label><input type="text" id="entered_url">
+    <input type="submit" value="Submit">
+</form>
+
+
+<p id="clean_url"></p>
+
+<script src="javascript.js"></script>
+
+
 <footer>
     <p>&copy; 2024 URL-CHECKER. TOUT DROIT RESEbrer.</p>
 </footer>
