@@ -6,7 +6,6 @@ async function processInput() {
 
   document.getElementById('clean_url').innerText = cleanedUrl;
   document.getElementById('non_latin').innerText = isNonLatin ? "The URL contains non-latin characters." : "The URL does not contain non-latin characters.";
-//  document.getElementById('whois_result').innerText = whoisData;
 
 
   // Clean the URL to remove any unnecessary parts
@@ -25,7 +24,7 @@ function checkNonLatinCharacters(url) {
     return /[^\u0000-\u007F]/.test(url);
 
   }
-  const GoogleSafeBrowsing_APIKey = "AIzaSyB04V8E4IJlrx3ywKqkjJ2vgEAHucJibWQ";
+  const GoogleSafeBrowsing_APIKey = "AIzaSyAYuqkchTccs8HnhW985bpqa1roI1qtoWU"; // Don't try to use this key. I made a burner account just for it and only the Google Safe Browsing API is enabled.
   const safeBrowsingUrl = 'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=' + GoogleSafeBrowsing_APIKey;
 
   const requestData = {
@@ -78,10 +77,10 @@ function Display_GoogleSafeBrowsing_Results(data) {
 }
 
 async function whois_lookup(url) {
-  const apiKey = 'at_Qy1xr2IAdN2t99QITjaV6pz6LWfm0'; // Replace with your actual API key
+  const whois_apiKey = 'at_Qy1xr2IAdN2t99QITjaV6pz6LWfm0'; // Don't try to use this key. I made a burner account just for it.
   const apiUrl = 'https://www.whoisxmlapi.com/whoisserver/WhoisService';
     try {
-        const response = await fetch(`${apiUrl}?domainName=${url}&apiKey=${apiKey}&outputFormat=JSON`);
+        const response = await fetch(`${apiUrl}?domainName=${url}&apiKey=${whois_apiKey}&outputFormat=JSON`);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
