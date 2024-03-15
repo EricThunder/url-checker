@@ -64,7 +64,7 @@ function Display_GoogleSafeBrowsing_Results(data) {
 
   let GoogleSafeBrowsing_Result = '';
   if (data.matches && data.matches.length > 0) {
-    GoogleSafeBrowsing_Result = '<p>Threat detected!</p>';
+    GoogleSafeBrowsing_Result = '<p>Threat detected!(GOOGLE API)</p>';
     data.matches.forEach(({platformType, threat, threatEntryType, threatType}) => {
       GoogleSafeBrowsing_Result += `<p>Threat type: ${threatType}</p>`;
       GoogleSafeBrowsing_Result += `<p>Platform type: ${platformType}</p>`;
@@ -72,7 +72,7 @@ function Display_GoogleSafeBrowsing_Results(data) {
       GoogleSafeBrowsing_Result += `<p>Threat URL: ${threat.url}</p>`;
     });
   } else {
-    GoogleSafeBrowsing_Result = '<p>No threat detected.</p>';
+    GoogleSafeBrowsing_Result = '<p>No threat detected.(GOOGLE API)</p>';
   }
   resultsContainer.innerHTML = GoogleSafeBrowsing_Result;
 }
