@@ -13,24 +13,20 @@ header {
 section {
     padding: 20px;
     text-align: center;
-    width: 100%;
 }
 footer {
     background-color: #333;
     color: #fff;
-    padding: 10px;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-sizing: border-box;
 }
 #myForm {
-    padding: 20px;
     text-align: center;
-    width: 100%;
 }
 #clean_url, #non_latin, #GoogleSafeBrowsing_Result, #whois_result {
-    padding: 10px;
     text-align: center;
     width: 100%;
 }
