@@ -10,18 +10,10 @@ header {
     padding: 20px;
     text-align: center;
 }
-nav {
-    background-color: #666;
-    padding: 10px;
-    text-align: center;
-}
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
 section {
     padding: 20px;
+    text-align: center;
+    width: 100%;
 }
 footer {
     background-color: #333;
@@ -30,5 +22,15 @@ footer {
     text-align: center;
     position: fixed;
     bottom: 0;
+    width: 100%;
+}
+#myForm {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+#clean_url, #non_latin, #GoogleSafeBrowsing_Result, #whois_result {
+    padding: 10px;
+    text-align: center;
     width: 100%;
 }
