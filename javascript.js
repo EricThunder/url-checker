@@ -84,13 +84,42 @@ async function whois_lookup(url) {
         }
         const data = await response.json();
         const creationDate = data.WhoisRecord.createdDate;
-        document.getElementById('whois_result').textContent = `Date de création du domaine: ${creationDate}`;
+        const relative_time = relative_time_calculator(creationDate);
+        document.getElementById('whois_result').textContent = `Date de création du domaine: ${relative_time}`;
         return creationDate;
     } catch (error) {
         console.error('Error:', error);
         return 'Error';
     }
 }
+
+function relative_time_calculator(creationDate) {
+    const currentDate = new Date();
+    const createdDate = new Date(creationDate);
+    const timeDifference = currentDate - createdDate;
+
+    const seconds = Math.floor(timeDifference / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    const months = Math.floor(days / 30);
+    const years = Math.floor(months / 12);
+
+    if (years > 0) {
+        return years === 1 ? 'Il y a 1 an' : `Il y a ${years} ans`;
+    } else if (months > 0) {
+        return months === 1 ? 'Il y a 1 mois' : `Il y a ${months} mois`;
+    } else if (days > 0) {
+        return days === 1 ? 'Il y a un jour' : `Il y a ${days} jours`;
+    } else if (hours > 0) {
+        return hours === 1 ? 'Il y a une heure' : `Il y a ${hours} heures`;
+    } else if (minutes > 0) {
+        return minutes === 1 ? 'il y a 1 minute' : `il y a ${minutes} minutes`;
+    } else {
+        return seconds < 5 ? "tout à l'heure" : `il y a ${seconds} secondes`;
+    }
+}
+
 
 
 
