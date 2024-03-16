@@ -63,8 +63,6 @@ function Display_GoogleSafeBrowsing_Results(data) {
     GoogleSafeBrowsing_Result = '<p>Menace détectée!</p>';
     data.matches.forEach(({platformType, threat, threatEntryType, threatType}) => {
       GoogleSafeBrowsing_Result += `<p>Type de menace: ${threatType}</p>`;
-      //GoogleSafeBrowsing_Result += `<p>Platform type: ${platformType}</p>`;
-      //GoogleSafeBrowsing_Result += `<p>Threat entry type: ${threatEntryType}</p>`;
       //GoogleSafeBrowsing_Result += `<p>Threat URL: ${threat.url}</p>`;
     });
   } else {
@@ -84,7 +82,7 @@ async function whois_lookup(url) {
         const data = await response.json();
         const creationDate = data.WhoisRecord.createdDate;
         const relative_time = relative_time_calculator(creationDate);
-        document.getElementById('whois_result').textContent = `Date de création du domaine: ${relative_time}`;
+        document.getElementById('whois_result').textContent = `Date de création du domaine: ${relative_time}` + ' (' + creationDate + ')';
         return creationDate;
     } catch (error) {
         console.error('Error:', error);
