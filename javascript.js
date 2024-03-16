@@ -55,8 +55,6 @@ function checkNonLatinCharacters(url) {
     console.error('Error:', error);
   }
 }
-
-
 // Display the results of the Google Safe Browsing API
 function Display_GoogleSafeBrowsing_Results(data) {
   const resultsContainer = document.getElementById('GoogleSafeBrowsing_Result');
