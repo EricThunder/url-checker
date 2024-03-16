@@ -48,7 +48,6 @@ function checkNonLatinCharacters(url) {
         'Content-Type': 'application/json'
       }
     });
-
     const data = await response.json();
     Display_GoogleSafeBrowsing_Results(data);
   } catch (error) {
