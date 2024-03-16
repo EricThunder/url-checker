@@ -9,24 +9,41 @@
 <body>
 
 <header>
-    <h1>VÉRIFICATEUR DES LIENS</h1>
+    <h1>Outil de vérification des liens URL</h1>
 </header>
 
 <section>
     <h2>À propos de cet outil</h2>
-    <p>Un outil créé pour vous protéger en ligne.</p>
+    <p>Cet outil a été conçu pour vous informer de diverses informations sur l'URL qui peuvent indiquer qu'elle est suspecte.</p>
 </section>
+
 
 <form id="URL_Form" onsubmit="event.preventDefault(); processInput();">
     <label for="entered_url"></label><input type="text" id="entered_url">
-    <input type="submit" value="Submit">
+    <input type="submit" value="Soumettre">
 </form>
 
 
-<p id="clean_url"></p>
-<p id="non_latin"></p>
-<p id="GoogleSafeBrowsing_Result"></p>
-<p id="whois_result"></p>
+<section>
+    <h3>L'URL sans tous les éléments inutiles (https, etc.)</h3>
+    <p id="clean_url"></p>
+</section>
+
+<section>
+    <h3>Contient-il des caractères non latins?</h3>
+    <p id="non_latin"></p>
+</section>
+
+<section>
+    <h3>État du site selon la navigation sécurisée (par Google)</h3>
+    <p id="GoogleSafeBrowsing_Result"></p>
+</section>
+
+<section>
+    <h3>L'âge du domaine (par WHOIS)</h3>
+    <p id="whois_result"></p>
+</section>
+
 
 <script src="javascript.js"></script>
 

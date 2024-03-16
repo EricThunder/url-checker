@@ -23,7 +23,7 @@ footer {
     width: 100%;
     box-sizing: border-box;
 }
-#myForm {
+#URL_Form {
     text-align: center;
 }
 #clean_url, #non_latin, #GoogleSafeBrowsing_Result, #whois_result {

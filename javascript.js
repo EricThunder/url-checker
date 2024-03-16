@@ -5,7 +5,7 @@ async function processInput() {
   let whoisData = whois_lookup(cleanedUrl);
 
   document.getElementById('clean_url').innerText = cleanedUrl;
-  document.getElementById('non_latin').innerText = isNonLatin ? "The URL contains non-latin characters." : "The URL does not contain non-latin characters.";
+  document.getElementById('non_latin').innerText = isNonLatin ? "L'URL contient des caractères non latins." : "L'URL ne contient pas de caractères non latins.";
 
 
   // Clean the URL to remove any unnecessary parts
@@ -61,15 +61,15 @@ function Display_GoogleSafeBrowsing_Results(data) {
 
   let GoogleSafeBrowsing_Result = '';
   if (data.matches && data.matches.length > 0) {
-    GoogleSafeBrowsing_Result = '<p>Threat detected!(GOOGLE API)</p>';
+    GoogleSafeBrowsing_Result = '<p>Menace détectée!</p>';
     data.matches.forEach(({platformType, threat, threatEntryType, threatType}) => {
-      GoogleSafeBrowsing_Result += `<p>Threat type: ${threatType}</p>`;
-      GoogleSafeBrowsing_Result += `<p>Platform type: ${platformType}</p>`;
-      GoogleSafeBrowsing_Result += `<p>Threat entry type: ${threatEntryType}</p>`;
-      GoogleSafeBrowsing_Result += `<p>Threat URL: ${threat.url}</p>`;
+      GoogleSafeBrowsing_Result += `<p>Type de menace: ${threatType}</p>`;
+      //GoogleSafeBrowsing_Result += `<p>Platform type: ${platformType}</p>`;
+      //GoogleSafeBrowsing_Result += `<p>Threat entry type: ${threatEntryType}</p>`;
+      //GoogleSafeBrowsing_Result += `<p>Threat URL: ${threat.url}</p>`;
     });
   } else {
-    GoogleSafeBrowsing_Result = '<p>No threat detected.(GOOGLE API)</p>';
+    GoogleSafeBrowsing_Result = '<p>Pas de menace détectée</p>';
   }
   resultsContainer.innerHTML = GoogleSafeBrowsing_Result;
 }
@@ -80,12 +80,11 @@ async function whois_lookup(url) {
     try {
         const response = await fetch(`${apiUrl}?domainName=${url}&apiKey=${whois_apiKey}&outputFormat=JSON`);
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error("La réponse du réseau n'était pas correcte");
         }
         const data = await response.json();
         const creationDate = data.WhoisRecord.createdDate;
-        document.getElementById('whois_result').textContent = `Domain Creation Date: ${creationDate}`;
-        //console.log('Domain Creation Date:', creationDate);
+        document.getElementById('whois_result').textContent = `Date de création du domaine: ${creationDate}`;
         return creationDate;
     } catch (error) {
         console.error('Error:', error);
