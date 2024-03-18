@@ -7,7 +7,6 @@ async function processInput() {
   document.getElementById('clean_url').innerText = cleanedUrl;
   document.getElementById('non_latin').innerText = isNonLatin ? "L'URL contient des caractères non latins." : "L'URL ne contient pas de caractères non latins.";
 
-
   // Clean the URL to remove any unnecessary parts
   function cleanUrl(url) {
   url = url.replace("https://", "");
@@ -116,8 +115,3 @@ function relative_time_calculator(creationDate) {
         return seconds < 5 ? "tout à l'heure" : `il y a ${seconds} secondes`;
     }
 }
-
-
-
-
-
