@@ -47,7 +47,7 @@ p {
     font-size: large;
 }
 input[type=text] {
-    padding: 4px;
+    padding: 5px;
     box-sizing: border-box;
 }
 input[type="submit"] {
