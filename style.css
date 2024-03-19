@@ -22,9 +22,7 @@ section {
     border-color:black;
     background-color: rgb(189, 189, 189);
     border-radius: 25px;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 35px;
+    margin: 35px 10%;
     padding-left: 12px;
     padding-right: 12px;
     padding-bottom: 12px;
