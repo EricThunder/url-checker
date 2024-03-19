@@ -22,11 +22,13 @@ section {
     border-color:black;
     background-color: rgb(189, 189, 189);
     border-radius: 25px;
-    margin-left: 150px;
-    margin-top: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 35px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
+    position: static;
 }
 /* footer {
     background-color: #333;
@@ -73,4 +75,17 @@ input[type="submit"]:hover {
 }
 input[type="submit"]:active {
     top: 4px;
+}
+#entered_url {
+    font-size: 15px;
+}
+#Tools_description{
+    float: right;
+    margin-right: 150px;
+    text-align: left;
+}
+#description {
+    margin-right: 4%;
+    margin-left: 4%;
+    padding-top: 20px;
 }
