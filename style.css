@@ -1,3 +1,7 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
