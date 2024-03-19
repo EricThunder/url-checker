@@ -14,11 +14,19 @@ section {
     padding: 20px;
     text-align: center;
 }
+#mainresults {
+    float:left;
+    border-width:2px;
+    border-style:solid;
+    border-color:black;
+    margin-left: 150px;
+    margin-top: 25px;
+}
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    position: static;
+    position: absolute;
     bottom: 0;
     width: 100%;
     box-sizing: border-box;

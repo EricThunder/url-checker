@@ -23,26 +23,28 @@
     <input type="submit" value="Soumettre">
 </form>
 
+<div id="mainresults">
+    <section>
+        <h3>L'URL sans tous les éléments inutiles (https, etc.)</h3>
+        <p id="clean_url"></p>
+    </section>
 
-<section>
-    <h3>L'URL sans tous les éléments inutiles (https, etc.)</h3>
-    <p id="clean_url"></p>
-</section>
+    <section>
+        <h3>Contient-il des caractères non latins?</h3>
+        <p id="non_latin"></p>
+    </section>
 
-<section>
-    <h3>Contient-il des caractères non latins?</h3>
-    <p id="non_latin"></p>
-</section>
+    <section>
+        <h3>État du site selon la navigation sécurisée (par Google)</h3>
+        <p id="GoogleSafeBrowsing_Result"></p>
+    </section>
 
-<section>
-    <h3>État du site selon la navigation sécurisée (par Google)</h3>
-    <p id="GoogleSafeBrowsing_Result"></p>
-</section>
+    <section>
+        <h3>L'âge du domaine (par WHOIS)</h3>
+        <p id="whois_result"></p>
+    </section>
+</div>
 
-<section>
-    <h3>L'âge du domaine (par WHOIS)</h3>
-    <p id="whois_result"></p>
-</section>
 
 <script src="javascript.js"></script>
 
