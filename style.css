@@ -1,13 +1,8 @@
-html {
-    position: relative;
-    min-height: 100%;
-}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-
 }
 header {
     background-color: #333;
@@ -16,7 +11,7 @@ header {
     text-align: center;
 }
 section {
-    padding: 20px;
+    padding: 2px;
     text-align: center;
 }
 #mainresults {
@@ -32,7 +27,7 @@ section {
     padding-right: 15px;
     padding-bottom: 15px;
 }
-footer {
+/* footer {
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -40,7 +35,7 @@ footer {
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
-}
+} */
 #URL_Form {
     text-align: center;
 }
@@ -48,3 +43,10 @@ footer {
     text-align: center;
     width: 100%;
 }
+p {
+    font-size: large;
+}
+input[type=text] {
+    padding: 4px;
+    box-sizing: border-box;
+  }
