@@ -11,18 +11,20 @@
 <header>
     <h1>Outil de vérification des liens URL</h1>
 </header>
+<div id="secondbackground">
+    <section id="intro">
+        <h2>À propos de cet outil</h2>
+        <p>Cet outil a été conçu pour vous informer de diverses informations sur l'URL qui peuvent indiquer qu'elle est suspecte.</p>
+    </section>
 
-<section id="intro">
-    <h2>À propos de cet outil</h2>
-    <p>Cet outil a été conçu pour vous informer de diverses informations sur l'URL qui peuvent indiquer qu'elle est suspecte.</p>
-</section>
 
-
-<form id="URL_Form" onsubmit="event.preventDefault(); processInput();">
-    <label for="entered_url"></label><input type="text" id="entered_url">
-    <input type="submit" value="Soumettre">
-</form>
-
+    <form id="URL_Form" onsubmit="event.preventDefault(); processInput();">
+        <label for="entered_url">
+        </label>
+        <input type="text" id="entered_url">
+        <input type="submit" value="Soumettre">
+    </form>
+</div>
 <div id="mainresults">
     <section>
         <h3>L'URL sans tous les éléments inutiles (https, etc.)</h3>
