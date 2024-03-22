@@ -21,7 +21,6 @@ async function processInput() {
 // Non-latin characters are characters that are not part of the ASCII character set (characters 0-127).
 function checkNonLatinCharacters(url) {
     return /[^\u0000-\u007F]/.test(url);
-
   }
   const GoogleSafeBrowsing_APIKey = "AIzaSyAYuqkchTccs8HnhW985bpqa1roI1qtoWU"; // Don't try to use this key. I made a burner account just for it and only the Google Safe Browsing API is enabled.
   const safeBrowsingUrl = 'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=' + GoogleSafeBrowsing_APIKey;
