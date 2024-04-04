@@ -22,7 +22,7 @@ async function processInput() {
 function checkNonLatinCharacters(url) {
     return /[^\u0000-\u007F]/.test(url);
   }
-  const GoogleSafeBrowsing_APIKey = "AIzaSyAYuqkchTccs8HnhW985bpqa1roI1qtoWU"; // Don't try to use this key. I made a burner account just for it and only the Google Safe Browsing API is enabled.
+  const GoogleSafeBrowsing_APIKey = "you_googleapi_key"; // Enable google safe browsing API in the API library (https://console.cloud.google.com/apis/library/safebrowsing.googleapis.com).
   const safeBrowsingUrl = 'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=' + GoogleSafeBrowsing_APIKey;
 
   const requestData = {
@@ -70,7 +70,7 @@ function Display_GoogleSafeBrowsing_Results(data) {
 }
 
 async function whois_lookup(url) {
-  const whois_apiKey = 'at_Qy1xr2IAdN2t99QITjaV6pz6LWfm0'; // Don't try to use this key. I made a burner account just for it.
+  const whois_apiKey = 'your_whoisxmlapi_key'; // Create an account at whoisxmlapi and paste your api key here.
   const apiUrl = 'https://www.whoisxmlapi.com/whoisserver/WhoisService';
     try {
         const response = await fetch(`${apiUrl}?domainName=${url}&apiKey=${whois_apiKey}&outputFormat=JSON`);
