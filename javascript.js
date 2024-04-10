@@ -22,7 +22,7 @@ async function processInput() {
 function checkNonLatinCharacters(url) {
     return /[^\u0000-\u007F]/.test(url);
   }
-  const GoogleSafeBrowsing_APIKey = "you_googleapi_key"; // Enable google safe browsing API in the API library (https://console.cloud.google.com/apis/library/safebrowsing.googleapis.com).
+  const GoogleSafeBrowsing_APIKey = "your_googleapi_key"; // Enable google safe browsing API in the API library (https://console.cloud.google.com/apis/library/safebrowsing.googleapis.com).
   const safeBrowsingUrl = 'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=' + GoogleSafeBrowsing_APIKey;
 
   const requestData = {
