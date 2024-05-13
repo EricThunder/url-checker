@@ -1,4 +1,4 @@
-***Does not work currently as API keys are absent***
+***Does not work currently as API keys are absent.***
 
 This tool was designed to notify you of various information about the URL that may indicate whether it is suspicious or not.
 
@@ -6,7 +6,7 @@ This tool was designed to notify you of various information about the URL that m
 
 ***
 
-***Ne fonctionne pas présentement en raison de l'absence des clés API***
+***Ne fonctionne pas présentement en raison de l'absence des clés API.***
 
 Cet outil a été conçu pour vous informer de diverses informations sur l'URL qui peuvent indiquer si elle est suspiceuse ou non.
 
